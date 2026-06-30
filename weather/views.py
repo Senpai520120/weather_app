@@ -1,4 +1,5 @@
 import requests
+import os
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
@@ -8,11 +9,12 @@ from django.views.decorators.http import require_POST
 from .models import City
 from .forms import CityForm
 
-OPENWEATHER_APPID = "743d66672b98a1a583a4c94b63d3b1e1"
+OPENWEATHER_APPID = os.environ.get("OPENWEATHER_APPID", "")
 OPENWEATHER_URL = (
     "https://api.openweathermap.org/data/2.5/weather"
     "?q={}&units=metric&appid=" + OPENWEATHER_APPID
 )
+
 
 
 def register_user(request):
