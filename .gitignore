@@ -1,5 +1,15 @@
+# Python
 __pycache__/
 *.pyc
-db.sqlite3
-.idea/
 .venv/
+venv/
+
+# Local settings and secrets
+.env
+
+# Database
+db.sqlite3
+
+# IDE
+.idea/
+.vscode/

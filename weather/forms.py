@@ -10,6 +10,6 @@ class CityForm(forms.ModelForm):
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
                 'id': 'city',
-                'placeholder': 'Введіть місто'
+                'placeholder': 'Enter a city'
             })
         }
